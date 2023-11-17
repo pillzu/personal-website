@@ -2,7 +2,7 @@
 	import { Avatar, LightSwitch } from '@skeletonlabs/skeleton';
 	import ProfileSrc from '$lib/assets/profile.jpg';
 
-	import { fade, scale, blur, slide, fly } from 'svelte/transition';
+	import { fade, scale, blur, fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	let visible = false;
 
@@ -15,17 +15,22 @@
 	<!-- Header -->
 	{#if visible}
 		<div class="w-full" in:fade>
-			<div class="flex flex-row justify-between">
-				<Avatar src={ProfileSrc} style="filter: url({'#BlueNight'})" width="w-24" />
+			<div class="flex flex-row justify-between items-center">
+				<Avatar
+					src={ProfileSrc}
+					alt="Piyush Upadhyay"
+					style="filter: url({'#BlueNight'})"
+					width="w-24"
+				/>
 				<LightSwitch />
 			</div>
-			<h3 class="py-2 h3">Piyush Upadhyay</h3>
+			<h3 class="py-4 h3">Piyush Upadhyay</h3>
 			<hr class="!border-solid" />
 		</div>
 		<!-- About me -->
 		<div class="row-span-3 pt-16 tracking-wider" in:blur={{ delay: 500 }}>
 			<h4
-				class="pb-5 font-black underline h4 decoration-wavy underline-offset-8 decoration-primary-500"
+				class="pt-7 pb-5 font-black underline h4 decoration-wavy underline-offset-8 decoration-primary-500"
 			>
 				Hello there!
 			</h4>
@@ -38,7 +43,7 @@
 				officia voluptate.
 			</p>
 			<h4
-				class="pt-5 pb-8 font-black underline h4 decoration-wavy underline-offset-8 decoration-primary-500"
+				class="pt-7 pb-5 font-black underline h4 decoration-wavy underline-offset-8 decoration-primary-500"
 			>
 				Essential Stats
 			</h4>
@@ -64,7 +69,7 @@
 			</div>
 		</div>
 		<!-- Call to action -->
-		<div class="flex flex-row row-span-2 gap-5">
+		<div class="flex flex-row row-span-2 gap-5 place-items-center">
 			<a href="/" class="py-5 px-5 font-bold btn variant-ghost-primary" in:scale={{ delay: 1250 }}
 				>👋 Send me a Yoohoo 👋</a
 			>
@@ -83,7 +88,7 @@
 			<a href="/" class=""><i class="devicon-linkedin-plain" /></a>
 			<a
 				href="/"
-				class="text-base underline decoration-wavy decoration-secondary-500 underline-offset-4"
+				class="text-base underline transition-colors decoration-wavy decoration-secondary-500 underline-offset-4 hover:decoration-tertiary-500"
 				>Source</a
 			>
 		</div>

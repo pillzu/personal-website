@@ -8,5 +8,7 @@
 	<svelte:fragment slot="sidebarLeft">
 		<Intro />
 	</svelte:fragment>
+	<!-- TODO: Add the vertical dividing line here -->
+	<!-- <span class="posh-7/10 divider-vertical text-surface-500" /> -->
 	<slot />
 </AppShell>
