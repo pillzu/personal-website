@@ -38,6 +38,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource/bebas-neue": "^5.0.17",
-    "@fontsource/manrope": "^5.0.17"
+    "@fontsource/manrope": "^5.0.17",
+    "devicon": "^2.15.1"
   }
 }
