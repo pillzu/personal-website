@@ -17,3 +17,43 @@ body {
    --theme-font-family-heading: 'Manrope', sans-serif;
    --theme-font-family-display: 'Bebas Neue', sans-serif;
 }
+
+
+.prose {
+	@apply w-full text-surface-900 dark:text-surface-100;
+}
+.prose h2 {
+	@apply h2;
+}
+
+.prose h3 {
+	@apply h3;
+}
+.prose h4 {
+	@apply h4;
+}
+.prose h5 {
+	@apply h5;
+}
+.prose h6 {
+	@apply h6;
+}
+.prose :is(h1, h2, h3, h4, h5, h6) {
+	@apply mt-8 mb-3 text-surface-900 dark:text-surface-100;
+}
+
+.prose p:not(:is(h2, h3, h4, h5, h6) + p) {
+	@apply mt-7;
+}
+
+.prose :is(ul, ol) {
+  @apply list-['🕸️'] pl-5;
+}
+
+.prose :is(ul, ol) li {
+	@apply m-2
+}
+
+.prose pre {
+	@apply w-full m-auto rounded-lg ;
+}
