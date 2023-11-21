@@ -19,8 +19,12 @@
 
 {#if visible}
 	<section class="flex flex-col p-5">
-		<div class="pt-5 pb-10 text-3xl font-black tracking-widest leading-relaxed">
-			<h2 class="pb-5 transition-all h2 font-display max-xl:h3">My Ephemeral Knowledge Base</h2>
+		<div class="pt-5 pb-10 text-3xl font-black tracking-widest leading-relaxed max-md:text-center">
+			<h2
+				class="pb-8 underline transition-all h2 font-display max-xl:h3 decoration-primary-500 decoration-wavy underline-offset-[12px]"
+			>
+				My Ephemeral Knowledge Base
+			</h2>
 			<blockquote class="text-lg font-thin tracking-normal blockquote max-xl:text-base">
 				Every now and then, my mind suggests something so <span class="font-black">✨ whack ✨</span
 				> that it would be a mistake if I didn't share it with this world. Thus, here's an assortment

@@ -13,7 +13,7 @@
 
 <section class="flex flex-col p-10">
 	<a href="/" class="text-xl max-xl:text-lg">👈 Back</a>
-	<article class="pl-10">
+	<article class="pl-10 max-md:pl-0">
 		<!-- Title -->
 		<hgroup class="flex flex-col gap-2 pt-10">
 			<h1 class="h1 max-xl:h2">{data.meta.title}</h1>

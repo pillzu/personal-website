@@ -11,7 +11,9 @@
 	});
 </script>
 
-<div class="grid grid-rows-6 items-center p-10 m-auto h-full max-xl:pl-5">
+<div
+	class="grid grid-rows-6 items-center p-10 m-auto h-full max-md:items-start max-xl:pl-5 max-md:p-5 max-md:m-0 max-md:w-full max-md:pb-0 max-md:grid-rows-5"
+>
 	<!-- Header -->
 	{#if visible}
 		<div class="w-full" in:fade>
@@ -23,13 +25,13 @@
 			<hr class="!border-solid" />
 		</div>
 		<!-- About me -->
-		<div class="row-span-3 self-center pt-16 tracking-wider" in:blur={{ delay: 500 }}>
+		<div class="row-span-3 self-center pt-16 tracking-wider max-md:pt-0" in:blur={{ delay: 500 }}>
 			<h4
-				class="pt-7 pb-5 font-black underline max-xl:pt-10 max-xl:pb-4 h4 decoration-wavy underline-offset-8 decoration-tertiary-600 max-xl:h6"
+				class="pt-7 pb-5 font-black underline max-md:pt-2 max-xl:pt-10 max-xl:pb-4 h4 decoration-wavy underline-offset-8 decoration-tertiary-600 max-xl:h6 max-md:h5"
 			>
 				Hello there!
 			</h4>
-			<p class="text-base max-xl:text-xs">
+			<p class="text-base max-xl:text-xs max-md:text-sm">
 				Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
 				ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
 				officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate
@@ -38,12 +40,12 @@
 				officia voluptate.
 			</p>
 			<h4
-				class="pt-7 pb-5 font-black underline max-xl:pt-2 h4 decoration-wavy underline-offset-8 decoration-tertiary-500 max-xl:h6"
+				class="pt-7 pb-5 font-black underline max-md:pt-4 max-xl:pt-2 h4 decoration-wavy underline-offset-8 decoration-tertiary-500 max-xl:h6 max-md:h5"
 			>
 				Essential Stats
 			</h4>
 			<div
-				class="grid grid-cols-3 grid-rows-2 gap-4 text-center max-xl:gap-2 max-xl:text-xs"
+				class="grid grid-cols-3 grid-rows-2 gap-4 text-center max-xl:gap-2 max-xl:text-xs max-md:text-sm"
 				in:fade={{ delay: 1000 }}
 			>
 				<span>
@@ -68,23 +70,23 @@
 		</div>
 		<!-- Call to action -->
 		<div
-			class="flex flex-row row-span-2 gap-5 place-items-center max-xl:pt-12 max-xl:flex-col max-xl:gap-3"
+			class="flex flex-row row-span-2 gap-5 place-items-center max-md:row-span-1 max-xl:pt-12 max-xl:flex-col max-xl:gap-3 max-md:self-center max-md:pt-0 max-md:gap-5"
 		>
 			<a
 				href="mailto:p3upadhy@uwaterloo.ca?subject=Awesome%20website%20man!&body=Hey%20Piyush%0D%0AJust%20wanted%20to%20drop%20by%20and%20say%20'Yoohooo'!%20How's%20it%20going?%0A%0A"
-				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 btn variant-ghost-primary"
+				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:text-sm btn variant-ghost-primary"
 				in:scale={{ delay: 1250 }}>👋 Send me a Yoohoo 👋</a
 			>
 			<a
 				href="/"
-				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 btn variant-ghost-error"
+				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:py-5 max-md:px-5 max-md:text-sm btn variant-ghost-error"
 				in:scale={{ delay: 1500 }}>📃 What have I done till now? 📃</a
 			>
 		</div>
 
 		<!-- Social Icons -->
 		<div
-			class="flex flex-row justify-around w-full h-full text-xl max-xl:text-sm"
+			class="flex flex-row justify-around w-full h-full text-xl max-xl:text-sm max-md:pt-10"
 			in:fly={{ y: 5, delay: 1500 }}
 		>
 			<a href="/" class=""><i class="devicon-github-original" /></a>
