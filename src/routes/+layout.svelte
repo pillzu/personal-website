@@ -1,36 +1,33 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
-	import { title } from '$lib/config';
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import Intro from '$lib/components/Intro.svelte';
+	import { fade } from 'svelte/transition';
+
+	export let data;
+	let size: number;
 </script>
 
-<AppShell slotFooter="p-3 grid-cols-3">
-	<svelte:fragment slot="header">
-		<AppBar
-			gridColumns="grid-cols-3"
-			slotDefault="place-self-center"
-			slotTrail="place-content-end"
-			background="transparent"
-			class="text-md"
-		>
-			<svelte:fragment slot="lead">
-				<a href="/">
-					<strong class="text-xl">{title}</strong>
-				</a>
-			</svelte:fragment>
+<svelte:window bind:innerWidth={size} />
 
-			<a class="pr-5" href="/blog">Blog</a>
-			<a class="" href="/about">About</a>
-
-			<svelte:fragment slot="trail">
-				<LightSwitch />
-			</svelte:fragment>
-		</AppBar>
+<AppShell slotSidebarLeft="w-1/3 max-md:w-0">
+	<!-- {#if size > 600} -->
+	<svelte:fragment slot="sidebarLeft">
+		{#if size > 600}
+			<Intro />
+		{/if}
 	</svelte:fragment>
-	<svelte:fragment slot="footer">
-		<hr class="!border-solid pb-5" />
-		Piyush Upadhyay @ 2023
+	<svelte:fragment slot="pageHeader">
+		{#if size < 600 && data.url == '/'}
+			<Intro />
+		{/if}
 	</svelte:fragment>
-	<slot />
+	<!-- {/if} -->
+	<!-- TODO: Add the vertical dividing line here -->
+	<!-- <span class="posh-7/10 divider-vertical text-surface-500" /> -->
+	{#key data.url}
+		<div class="transition">
+			<slot />
+		</div>
+	{/key}
 </AppShell>

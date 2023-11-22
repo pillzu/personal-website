@@ -1,12 +1,15 @@
 <script lang="ts">
-	import { fade, scale, blur } from 'svelte/transition';
+	import { fade, blur } from 'svelte/transition';
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	import { formatDate } from '$lib/utils';
 	let visible = false;
+
+	export let data: PageData;
+	$: posts = data.posts;
 
 	onMount(() => {
 		visible = true;
-		console.log('In onMount');
-		console.log(visible);
 	});
 </script>
 
@@ -15,17 +18,32 @@
 </svelte:head>
 
 {#if visible}
-	<div class="flex flex-col place-items-center align-middle">
-		<div
-			class="text-6xl font-black tracking-widest leading-relaxed text-center md:pt-28 xl:pt-52 xl:text-8xl"
-		>
-			<h1 class="uppercase transition-all xl:pb-10 font-display" in:scale>Just another</h1>
-			<h1 class="font-sans" in:fade={{ delay: 500 }}>☕ 404 Magician ☕</h1>
-			<h1 class="pt-5 text-base font-medium tracking-normal xl:pt-10" in:blur={{ delay: 750 }}>
-				✨ (Making <span class="code">problems</span> disappear since 2020) ✨
-			</h1>
+	<section class="flex flex-col p-5">
+		<div class="pt-5 pb-10 text-3xl font-black tracking-widest leading-relaxed max-md:text-center">
+			<h2
+				class="pb-8 underline transition-all h2 font-display max-xl:h3 decoration-secondary-500 decoration-wavy underline-offset-[12px]"
+			>
+				My Ephemeral Knowledge Base
+			</h2>
+			<blockquote class="text-lg font-thin tracking-normal blockquote max-xl:text-base">
+				Every now and then, my mind suggests something so <span class="font-black">✨ whack ✨</span
+				> that it would be a mistake if I didn't share it with this world. Thus, here's an assortment
+				of some of those thoughts for you to explore!
+			</blockquote>
 		</div>
-
-		<a href="/blog" class="mt-10 btn variant-ghost" in:fade={{ delay: 1500 }}>Click. Geek. Peek</a>
-	</div>
+		<ul class="flex flex-col gap-10" in:fade={{ delay: 500 }}>
+			{#each posts as post, i (i)}
+				<a href={'/posts/' + post.slug} class="">
+					<span class="flex flex-row justify-between pb-5">
+						<h2 class="font-black transition-all h2 max-xl:h3">{post.title}</h2>
+						<p class="text-surface-300 max-xl:text-base dark:text-surface-400">
+							{formatDate(post.date)}
+						</p>
+					</span>
+					<p class="max-xl:text-sm">{post.description}</p>
+				</a>
+				<hr />
+			{/each}
+		</ul>
+	</section>
 {/if}
