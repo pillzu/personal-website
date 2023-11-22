@@ -97,7 +97,7 @@
 			<a href="https://twitter.com/pillzzu" class=""><i class="fa-brands fa-x-twitter" /></a>
 			<a href="https://www.linkedin.com/in/piup/" class=""><i class="fa-brands fa-linkedin" /></a>
 			<a
-				href="/"
+				href="https://github.com/pillzu/personal-website"
 				class="text-base underline transition-colors decoration-wavy decoration-secondary-500 underline-offset-4 max-xl:text-sm hover:decoration-tertiary-500"
 				>Source</a
 			>
