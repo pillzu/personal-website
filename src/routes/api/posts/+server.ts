@@ -10,7 +10,7 @@ async function getPosts() {
 		const file = paths[path]
 		const slug = path.split('/').at(-1)?.replace('.svx', '')
 
-    // extract slug, metadata
+		// extract slug, metadata
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<Post, 'slug'>
 			const post = { ...metadata, slug } satisfies Post
@@ -18,15 +18,15 @@ async function getPosts() {
 		}
 	}
 
-  // sort posts 
+	// sort posts 
 	posts = posts.sort((first, second) =>
-    new Date(second.date).getTime() - new Date(first.date).getTime()
+		new Date(second.date).getTime() - new Date(first.date).getTime()
 	)
 
 	return posts
 }
 
 export async function GET() {
-	const posts = await getPosts()
+	const posts: Post[] = await getPosts()
 	return json(posts)
 }

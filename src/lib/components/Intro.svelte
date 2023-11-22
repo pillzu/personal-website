@@ -32,12 +32,15 @@
 				Hello there!
 			</h4>
 			<p class="text-base max-xl:text-xs max-md:text-sm">
-				Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-				ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-				officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate
-				dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea
-				nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-				officia voluptate.
+				Howdy, fellow digital explorers! 🚀 I'm Piyush, a 404 Magician and the eternal arch nemesis
+				of our old enemy: <b>sneaky semicolon.</b>
+				☕️ <br />Jokes apart, I am an explorer in the world of Computer Science, diving into
+				building interesting applications day in and day out! If you have any ideas,
+				<b>Send a Yoohoo</b>
+				my way and I'll make sure we can bring that half-baked idea to fruition 🥭 (mango is my favourite)
+				<br />
+				Welcome to my little space on the huge web of internet! Cheers to coding and chuckles 😹 (I use
+				neovim btw)
 			</p>
 			<h4
 				class="pt-7 pb-5 font-black underline max-md:pt-4 max-xl:pt-2 h4 decoration-wavy underline-offset-8 decoration-tertiary-500 max-xl:h6 max-md:h5"
@@ -64,7 +67,7 @@
 					<span class="code">GPA </span> <br /> 3.7
 				</span>
 				<span>
-					<span class="code">Blogs</span> <br /> 0
+					<span class="code">Graduation</span> <br /> 2025
 				</span>
 			</div>
 		</div>
@@ -78,7 +81,8 @@
 				in:scale={{ delay: 1250 }}>👋 Send me a Yoohoo 👋</a
 			>
 			<a
-				href="/"
+				href="/PiyushUpadhyayResume.pdf"
+				target="_blank"
 				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:py-5 max-md:px-5 max-md:text-sm btn variant-ghost-error"
 				in:scale={{ delay: 1500 }}>📃 What have I done till now? 📃</a
 			>
@@ -89,9 +93,9 @@
 			class="flex flex-row justify-around w-full h-full text-xl max-xl:text-sm max-md:pt-10"
 			in:fly={{ y: 5, delay: 1500 }}
 		>
-			<a href="/" class=""><i class="devicon-github-original" /></a>
-			<a href="/" class=""> <i class="devicon-twitter-original" /></a>
-			<a href="/" class=""><i class="devicon-linkedin-plain" /></a>
+			<a href="https://github.com/pillzu" class=""><i class="fa-brands fa-github" /></a>
+			<a href="https://twitter.com/pillzzu" class=""><i class="fa-brands fa-x-twitter" /></a>
+			<a href="https://www.linkedin.com/in/piup/" class=""><i class="fa-brands fa-linkedin" /></a>
 			<a
 				href="/"
 				class="text-base underline transition-colors decoration-wavy decoration-secondary-500 underline-offset-4 max-xl:text-sm hover:decoration-tertiary-500"

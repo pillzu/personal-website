@@ -21,7 +21,7 @@
 	<section class="flex flex-col p-5">
 		<div class="pt-5 pb-10 text-3xl font-black tracking-widest leading-relaxed max-md:text-center">
 			<h2
-				class="pb-8 underline transition-all h2 font-display max-xl:h3 decoration-primary-500 decoration-wavy underline-offset-[12px]"
+				class="pb-8 underline transition-all h2 font-display max-xl:h3 decoration-secondary-500 decoration-wavy underline-offset-[12px]"
 			>
 				My Ephemeral Knowledge Base
 			</h2>
