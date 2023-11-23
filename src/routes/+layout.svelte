@@ -10,15 +10,15 @@
 
 <svelte:window bind:innerWidth={size} />
 
-<AppShell slotSidebarLeft="w-1/3 max-md:w-0">
+<AppShell slotSidebarLeft="xl:w-1/3 max-xl:w-2/5 max-lg:w-0">
 	<!-- {#if size > 600} -->
 	<svelte:fragment slot="sidebarLeft">
-		{#if size > 600}
+		{#if size >= 1024}
 			<Intro />
 		{/if}
 	</svelte:fragment>
 	<svelte:fragment slot="pageHeader">
-		{#if size < 600 && data.url == '/'}
+		{#if size < 1024 && data.url == '/'}
 			<Intro />
 		{/if}
 	</svelte:fragment>

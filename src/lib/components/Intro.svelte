@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="grid grid-rows-6 items-center p-10 m-auto h-full max-md:items-start max-xl:pl-5 max-md:p-5 max-md:m-0 max-md:w-full max-md:pb-0 max-md:grid-rows-5"
+	class="grid relative items-center p-5 m-auto w-full h-full grid-rows-[1fr_2fr_2fr_1fr_0.5fr] max-md:m-0 max-md:pb-0"
 >
 	<!-- Header -->
 	{#if visible}
@@ -21,17 +21,20 @@
 				<Avatar src={ProfileSrc} alt="Piyush Upadhyay" width="w-24 max-xl:w-20" />
 				<LightSwitch />
 			</div>
-			<h3 class="py-4 h3 max-xl:h4">Piyush Upadhyay</h3>
+			<h3 class="py-4 max-xl:py-2 h3 max-xl:h4">Piyush Upadhyay</h3>
 			<hr class="!border-solid" />
 		</div>
 		<!-- About me -->
-		<div class="row-span-3 self-center pt-16 tracking-wider max-md:pt-0" in:blur={{ delay: 500 }}>
+		<div
+			class="self-center tracking-wider max-lg:text-center max-md:self-center max-lg:self-start max-md:pt-0"
+			in:blur={{ delay: 500 }}
+		>
 			<h4
-				class="pt-7 pb-5 font-black underline max-md:pt-2 max-xl:pt-10 max-xl:pb-4 h4 decoration-wavy underline-offset-8 decoration-tertiary-600 max-xl:h6 max-md:h5"
+				class="pb-2 font-black underline max-xl:pb-3 h4 decoration-wavy underline-offset-8 decoration-tertiary-600 max-xl:h6"
 			>
 				Hello there!
 			</h4>
-			<p class="text-base max-xl:text-xs max-md:text-sm">
+			<p class="m-auto text-base max-xl:text-xs max-md:text-sm max-lg:max-w-lg">
 				Howdy, fellow digital explorers! 🚀 I'm Piyush, a 404 Magician and the eternal arch nemesis
 				of our old enemy: <b>sneaky semicolon.</b>
 				☕️ <br />Jokes apart, I am an explorer in the world of Computer Science, diving into
@@ -39,16 +42,20 @@
 				<b>Send a Yoohoo</b>
 				my way and I'll make sure we can bring that half-baked idea to fruition 🥭 (mango is my favourite)
 				<br />
-				Welcome to my little space on the huge web of internet! Cheers to coding and chuckles 😹 (I use
-				neovim btw)
 			</p>
+		</div>
+		<!-- Essential Stats -->
+		<div
+			class="self-center h-full tracking-wider max-lg:text-center max-md:self-center max-lg:self-start max-md:pt-0"
+			in:blur={{ delay: 500 }}
+		>
 			<h4
-				class="pt-7 pb-5 font-black underline max-md:pt-4 max-xl:pt-2 h4 decoration-wavy underline-offset-8 decoration-tertiary-500 max-xl:h6 max-md:h5"
+				class="pb-2 font-black underline max-xl:pb-2 h4 decoration-wavy underline-offset-8 decoration-tertiary-600 max-xl:h6"
 			>
 				Essential Stats
 			</h4>
 			<div
-				class="grid grid-cols-3 grid-rows-2 gap-4 text-center max-xl:gap-2 max-xl:text-xs max-md:text-sm"
+				class="grid grid-cols-3 grid-flow-row p-5 h-5/6 text-center max-lg:grid-cols-2 max-lg:grid-rows-3 max-xl:gap-4 max-xl:text-xs max-md:text-sm"
 				in:fade={{ delay: 1000 }}
 			>
 				<span>
@@ -72,25 +79,23 @@
 			</div>
 		</div>
 		<!-- Call to action -->
-		<div
-			class="flex flex-row row-span-2 gap-5 place-items-center max-md:row-span-1 max-xl:pt-12 max-xl:flex-col max-xl:gap-3 max-md:self-center max-md:pt-0 max-md:gap-5"
-		>
+		<div class="flex flex-row flex-wrap gap-5 justify-around place-items-center max-md:self-center">
 			<a
 				href="mailto:p3upadhy@uwaterloo.ca?subject=Awesome%20website%20man!&body=Hey%20Piyush%0D%0AJust%20wanted%20to%20drop%20by%20and%20say%20'Yoohooo'!%20How's%20it%20going?%0A%0A"
-				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:text-sm btn variant-ghost-primary"
+				class="gap-2 py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:py-3 max-md:px-2 max-md:text-sm btn variant-ghost-primary"
 				in:scale={{ delay: 1250 }}>👋 Send me a Yoohoo 👋</a
 			>
 			<a
 				href="/PiyushUpadhyayResume.pdf"
 				target="_blank"
-				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:py-5 max-md:px-5 max-md:text-sm btn variant-ghost-error"
-				in:scale={{ delay: 1500 }}>📃 What have I done till now? 📃</a
+				class="py-5 px-5 font-bold max-xl:text-xs max-xl:py-3 max-xl:px-2 max-md:py-3 max-md:px-2 max-md:text-sm btn variant-ghost-error"
+				in:scale={{ delay: 1500 }}>📃 Got Any Experience? 📃</a
 			>
 		</div>
 
 		<!-- Social Icons -->
 		<div
-			class="flex flex-row justify-around w-full h-full text-xl max-xl:text-sm max-md:pt-10"
+			class="flex flex-row justify-around items-end w-full h-full text-xl max-xl:text-base max-md:pt-10"
 			in:fly={{ y: 5, delay: 1500 }}
 		>
 			<a href="https://github.com/pillzu" class=""><i class="fa-brands fa-github" /></a>
