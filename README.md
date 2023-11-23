@@ -1,38 +1,30 @@
-# create-svelte
+# My Personal Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the source code to [my-website](https://pillzu.vercel.app). It's built using the following tools:
+- Sveltekit
+- SkeletonUI
+- bun
+- Vercel (for deployment)
 
-## Creating a project
+## Goal & Intent
+I built this website to keep myself accountable and actually share what I learn as I dive deeper into Computer Science and Business. I honestly believe I should have started early, but the second best time to do it is now. 
+I hope I am able to provide valuable insights into common mistakes/epiphanies that most developers have on their journey and can actually improve your life in any way possible (even if it's a small impact).
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+P.S. Oh, and feel free to fork and change values to build your own blog. It's pretty simple and should actually help you get started right away. Good luck and off we go 🔥
 
 ## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've created a project and installed dependencies with `bun install`, start a development server.
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun dev
 ```
 
 ## Building
 
-To create a production version of your app:
+To create a production version of this website:
 
 ```bash
-npm run build
+bun run build
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+You can preview the production build with `bun run preview`.
