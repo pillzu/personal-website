@@ -11,7 +11,7 @@ published: true
 
 Hey friends! 👋
 
-I am Piyush, and this is my first blog (obviously)! I haven't proof-read it, nor have I spent time trying to re-read what I am writing here, but my goal through this blog is to convey the idea that anything is possible if we put our heart and soul to it!
+I am Piyush, and this is my first blog (as you probably know)! I haven't proof-read it, nor have I spent time trying to shape how this is supposed to synthesize, but my goal through this blog is to convey the idea that anything is possible if we put our heart and soul to it!
 
 ### Intent and Vision
 My goal is to treat this blog as a **PKM** (Personal Knowledge Manager) as well as a way to keep track of my progress in general (similar to build in public but in my own way). I'll continue to add the features as we go, to make the blog more interesting and hope that people actually visit it as well 😅
